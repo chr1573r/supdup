@@ -3,12 +3,12 @@
 scandir="$1"
 ! [[ -d "$1" ]] && echo -e "'$1' is not a valid directory." && exit
 
-! [[ -d supadupa ]] && mkdir supadupa 2&> /dev/null
+! [[ -d supadupa ]] && mkdir supadupa
 ! [[ -d supadupa ]] && echo -e "Failed to create log dir" && exit
 
 [[ -z "$2" ]] && sizefilter="0" || sizefilter="$2"
 
-logdir="supadupa/$(date +%Y_%m_%d_+%H-%M-%S)"
+logdir="supadupa/$(date +%Y_%m_%d_%H-%M-%S)"
 mkdir "$logdir"
 mkdir "$logdir/sum"
 mkdir "$logdir/size"
