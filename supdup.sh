@@ -1,5 +1,5 @@
 #!/bin/bash
-# Syntax: ./supdup <directory to analyze> <minimum file size for dedup check>
+# Syntax: ./supdup <directory to analyze> <minimum file size in bytes for dedup check>
 scandir="$1"
 ! [[ -d "$1" ]] && echo -e "'$1' is not a valid directory." && exit
 
